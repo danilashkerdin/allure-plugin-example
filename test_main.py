@@ -7,19 +7,22 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 
 
-def test_google():
-    driver = WebDriver(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
-    driver.get("https://www.google.com")
-    time.sleep(3)
+class Tests:
 
+    @allure.id("101175")
+    def test_google(self):
+        driver = WebDriver(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+        driver.get("https://www.google.com")
+        time.sleep(3)
 
-def test_yandex():
-    driver = WebDriver(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
-    driver.get("https://www.yandex.ru")
-    time.sleep(3)
+    @allure.id("101177")
+    def test_yandex(self):
+        driver = WebDriver(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+        driver.get("https://www.yandex.ru")
+        time.sleep(3)
 
-
-def test_duck():
-    driver = WebDriver(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
-    driver.get("https://www.duckduckgo.com")
-    time.sleep(3)
+    @allure.id("101176")
+    def test_duck(self):
+        driver = WebDriver(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+        driver.get("https://www.duckduckgo.com")
+        time.sleep(3)
