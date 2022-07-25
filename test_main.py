@@ -23,6 +23,16 @@ class Tests:
 
     @allure.id("101176")
     def test_duck(self):
+        """
+        docstring
+
+        try to delete @allure.id and assign test
+
+        try with another test
+
+        try to delete docstring and start launch then upload and try assign id once again
+
+        """
         driver = WebDriver(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
         driver.get("https://www.duckduckgo.com")
         time.sleep(3)
